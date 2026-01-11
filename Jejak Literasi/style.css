@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f0f0f0; 
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 750px;
+    margin: 40px 20px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    /* BACKGROUND GAMBAR DI DALAM KOLOM - DITEBALKAN (TRANSPARANSI DIKURANGI) */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), 
+                      url('background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: local;
+}
+
+.top-nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 35px;
+    padding: 0 5px;
+}
+
+/* Mengubah warna emoji Bookmark dan Buku menjadi Hijau Estetik */
+.top-nav .icon {
+    font-size: 1.6em;
+    filter: sepia(100%) saturate(400%) hue-rotate(85deg); 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.top-nav .icon:hover {
+    transform: scale(1.1);
+}
+
+.search-bar { 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(46, 125, 50, 0.2); 
+    padding: 8px 25px; 
+    border-radius: 25px; 
+    background: rgba(255, 255, 255, 0.9); 
+    color: #2e7d32; 
+    font-size: 0.85em;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
+}
+
+.search-icon, .mic-icon {
+    font-size: 1.1em;
+    filter: sepia(100%) saturate(200%) hue-rotate(90deg);
+    opacity: 0.7;
+}
+
+/* BAGIAN BUKU (HERO) - DIRAPIKAN JARAKNYA */
+.hero { 
+    display: flex; 
+    gap: 25px; 
+    margin-bottom: 30px; 
+    align-items: flex-start; 
+}
+
+.cover-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px
+}
+
+.book-cover { 
+    width: 140%; 
+    height: auto;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2); 
+    border-radius: 3px; 
+}
+
+.short-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.book-title { 
+    font-size: 2.2em; 
+    color: #2e7d32; 
+    margin: 0; 
+    line-height: 1.1;
+}
+
+.subtitle { 
+    font-weight: bold; 
+    color: #4caf50; 
+    margin: 2px 0;
+}
+
+.author { 
+    font-style: italic; 
+    color: #388e3c; 
+    margin: 0 0 10px 0; 
+    display: block; 
+}
+
+.quote {
+    margin-top: 5px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.tags { 
+    align-self: flex-start; 
+    background: #e8f5e9; 
+    color: #2e7d32; 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    font-size: 0.75em; 
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.review-section, .stories-list { margin-top: 40px; border-top: 1px solid #c8e6c9; padding-top: 20px; }
+.section-title { text-align: center; letter-spacing: 8px; text-transform: uppercase; color: #2e7d32; margin-bottom: 25px; }
+.review-text { text-align: justify; line-height: 1.8; }
+
+
+.stories-list { display: flex; flex-direction: column; gap: 15px; }
+.story-card { width: 100%; background: rgba(255, 255, 255, 0.6); padding: 20px; border-radius: 8px; border-left: 5px solid #81c784; box-sizing: border-box; }
+.story-card h3 { margin: 0 0 8px 0; color: #1b5e20; font-size: 1.1em; }
+.story-card p { margin: 0; font-style: italic; font-size: 0.95em; color: #444; line-height: 1.6; }
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between; 
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.image-gallery img {
+    width: 23%;            
+    height: 110px;         
+    object-fit: cover;     
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+.footer-visual h3 { color: #2e7d32; text-align: center; font-size: 1.1em; margin-bottom: 15px; }
+.final-quote { background: #66bb6a; color: white; padding: 25px; text-align: center; border-radius: 8px; font-style: italic; line-height: 1.5; }
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 650px) {
+    .hero { flex-direction: column; align-items: center; text-align: center; }
+    .container { padding: 20px; margin: 15px 10px; }
+    .book-title { font-size: 1.8em; }
+    .image-gallery img { height: 70px; } 
+}
+
+.site-purpose {
+    font-size: 0.9em;
+    color: #4f4f4f;
+    margin-top: 10px;
+    line-height: 1.6;
+    font-style: italic;
+}
