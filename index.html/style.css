@@ -16,7 +16,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
-    /* BACKGROUND GAMBAR DI DALAM KOLOM - DITEBALKAN (TRANSPARANSI DIKURANGI) */
+    
     background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), 
                       url('background.jpg'); 
     background-size: cover;
@@ -32,7 +32,6 @@ body {
     padding: 0 5px;
 }
 
-/* Mengubah warna emoji Bookmark dan Buku menjadi Hijau Estetik */
 .top-nav .icon {
     font-size: 1.6em;
     filter: sepia(100%) saturate(400%) hue-rotate(85deg); 
@@ -65,7 +64,6 @@ body {
     opacity: 0.7;
 }
 
-/* BAGIAN BUKU (HERO) - DIRAPIKAN JARAKNYA */
 .hero { 
     display: flex; 
     gap: 25px; 
@@ -134,7 +132,6 @@ body {
 .section-title { text-align: center; letter-spacing: 8px; text-transform: uppercase; color: #2e7d32; margin-bottom: 25px; }
 .review-text { text-align: justify; line-height: 1.8; }
 
-
 .stories-list { display: flex; flex-direction: column; gap: 15px; }
 .story-card { width: 100%; background: rgba(255, 255, 255, 0.6); padding: 20px; border-radius: 8px; border-left: 5px solid #81c784; box-sizing: border-box; }
 .story-card h3 { margin: 0 0 8px 0; color: #1b5e20; font-size: 1.1em; }
@@ -174,3 +171,4 @@ body {
     line-height: 1.6;
     font-style: italic;
 }
+
